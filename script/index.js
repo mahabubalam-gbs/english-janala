@@ -116,7 +116,7 @@ const displayLessons = (lessons) => {
     for (let lesson of lessons) {
         const btnDiv = document.createElement("div");
         btnDiv.innerHTML = `<button id="lesson-btn-${lesson.level_no}" onclick="loadLevelWord(${lesson.level_no})" class="btn btn-outline btn-primary lesson-btn">
-        <i class="fa-solid fa-circle-question"></i>Lesson - ${lesson.level_no}
+        <i class="fa-solid fa-book-open"></i> Lesson - ${lesson.level_no}
         </button>`
 
         levelContainer.append(btnDiv);
@@ -124,3 +124,17 @@ const displayLessons = (lessons) => {
 };
 
 loadLessons();
+
+document.getElementById("btn-search").addEventListener("click", () => {
+    removeActive();
+    const input = document.getElementById("input-search");
+    const serachValue = input.value.trim().toLowerCase();
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+        .then(res => res.json())
+        .then(data => {
+            const allWords = data.data;
+            const filterWords = allWords.filter(word => word.word.toLowerCase().includes(serachValue));
+            displayLevelWord(filterWords)
+        })
+});
