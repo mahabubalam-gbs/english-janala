@@ -33,29 +33,36 @@ JavaScript (Vanilla JS)
 
 REST API Integration
 
-📡 API Endpoints
+## 📡 API Endpoints
 🔹 Get All Levels
+```
 https://openapi.programming-hero.com/api/levels/all
+```
 🔹 Get Words by Level
+
 https://openapi.programming-hero.com/api/level/{id}
 
 Example:
-
+```
 https://openapi.programming-hero.com/api/level/5
+```
 🔹 Get Word Details
 https://openapi.programming-hero.com/api/word/{id}
 
 Example:
-
+```
 https://openapi.programming-hero.com/api/word/5
+```
 🔹 Get All Words
+```
 https://openapi.programming-hero.com/api/words/all
+```
 
-💡 How to Run Locally
+# 💡 How to Run Locally
 
 Clone the repository
 
-git clone https://github.com/mahabubalam-gbs/english-janala.git
+``` git clone  https://github.com/mahabubalam-gbs/english-janala.git ```
 
 Open index.html in your browser
 
