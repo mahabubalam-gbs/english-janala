@@ -34,6 +34,7 @@ JavaScript (Vanilla JS)
 REST API Integration
 
 ## 📡 API Endpoints
+
 🔹 Get All Levels
 ```
 https://openapi.programming-hero.com/api/levels/all
@@ -47,6 +48,7 @@ Example:
 https://openapi.programming-hero.com/api/level/5
 ```
 🔹 Get Word Details
+
 https://openapi.programming-hero.com/api/word/{id}
 
 Example:
